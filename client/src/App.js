@@ -26,11 +26,11 @@ const App = () => {
       <Grow in>
         <Container>
           <Grid container justify="space-between" alignItems="stretch" spacing={3}>
-            <Grid item xs={12} sm={7}>
-              <Posts setCurrentId={setCurrentId} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={4}> {/* Form now takes up 4 columns on small screens and above */}
               <Form currentId={currentId} setCurrentId={setCurrentId} />
+            </Grid>
+            <Grid item xs={12} sm={7}> {/* Posts now takes up 7 columns on small screens and above */}
+              <Posts setCurrentId={setCurrentId} />
             </Grid>
           </Grid>
         </Container>
